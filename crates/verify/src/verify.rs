@@ -422,7 +422,7 @@ impl VerifyArgs {
                 &project.settings
             } else {
                 eyre::bail!(
-                    "If cache is disabled, compilation profile must be provided with `--compiler-version` option or set in foundry.toml"
+                    "If cache is disabled, compilation profile must be provided with `--compilation-profile` option or set in foundry.toml"
                 )
             };
 
@@ -581,4 +581,4 @@ mod tests {
         assert!(args.no_auto_detect);
         assert_eq!(args.use_solc.as_deref(), Some("0.8.23"));
     }
-}
+        }
